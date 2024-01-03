@@ -5,14 +5,17 @@ import "./styles/index.css";
 import reportWebVitals from "./reportWebVitals";
 import Home from "./pages/home";
 import Error from "./pages/error";
+import Navbar from "./components/navbar";
+import AllFlags from "./pages/allFlags";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router className="app">
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/allFlags" element={<AllFlags />} />
         <Route path="*" element={<Error />} />
       </Routes>
       {/* <Footer /> */}
